@@ -1,0 +1,38 @@
+               @import "../SCSS/theme.scss";
+               body {
+                   //  background-color: $mainColor;
+                   //    background-color: $bgDefault;
+                   header {
+                       nav {
+                           height: 72px;
+                           img {
+                               width: 100px;
+                               height: 100px;
+                           }
+                       }
+                   }
+                   #Result,
+                   #ResultDna,
+                   #ResultProtein {
+                       display: none;
+                       // visibility: hidden;
+                       // height: 100rem;
+                   }
+                   .itemView {
+                       box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
+                       border: white solid;
+                       border-radius: 25px;
+                       //    .SequenceAlign {
+                       //        height: 50rem;
+                       //    }
+                   }
+                   footer {
+                       margin-top: 100px;
+                       height: 3rem;
+                       //     background-color: rgb(228, 163, 255);
+                   }
+               }
+               
+               #navbarNavAltMarkup {
+                   padding-left: 40rem;
+               }

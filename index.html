@@ -1,0 +1,329 @@
+<html>
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <!-- brython-->
+
+    <script src="https://cdn.jsdelivr.net/npm/brython@3.8.10/brython.min.js">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/brython@3.8.10/brython_stdlib.js">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/brython/3.8.8/brython.js" integrity="sha256-rA89wPrTJJQFWJaZveKW8jpdmC3t5F9rRkPyBjz8G04=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/brython/3.8.8/brython_stdlib.js" integrity="sha256-Gnrw9tIjrsXcZSCh/wos5Jrpn0bNVNFJuNJI9d71TDs=" crossorigin="anonymous"></script>
+
+
+    <!-- boxicons -->
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+    <!-- normalize -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+
+    <!-- Bootstrap style -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+
+
+    <!-- page style -->
+    <link rel="stylesheet" href="SCSS/name.css">
+
+
+
+    <title>ASDSA Alignment Detector</title>
+</head>
+
+<body onload="brython()">
+
+
+    <nav class="navbar   navbar-expand-lg    bg-colorMain container-fluid mb-5 ">
+        <div class="container ">
+            <img src="./images/Frame.svg " alt="" width="200" class="d-inline-block align-text-top mt-3 mb-3">
+            <!-- <img src="./image/Object/Other 20.png" alt="" width="72" height="72" class="d-inline-block align-text-top">
+                -->
+        </div>
+    </nav>
+
+    <div class="header txtMainColor container mt-5">
+        <div class="row  align-items-center justify-content-center">
+            <div class="col-6 ">
+                <div class="headerTxt lh-sm">Autism Spectrum Disorder </div>
+                <div class="headerSMTxt lh-sm">Sequences Alignment</div>
+                <div class="smallTxt  mt-2 lh-lg">Diagnosing autism spectrum disorder (ASD) can be difficult because there is no medical test, like a blood test, to diagnose the disorder. Doctors look at the child’s developmental history and behavior to make a diagnosis.
+                </div>
+                <button type="button" class="btn btn-defult mt-4 p-3">Let’s Test Your Alignment</button>
+            </div>
+
+            <div class="col"></div>
+            <div class="col-5 ps-5">
+                <img src="./images/bro.svg" width="700" height="600">
+            </div>
+
+        </div>
+    </div>
+
+    <div class="main container">
+        <!-- _____________________________________________________General_____________________________________________________________ -->
+
+        <div class="container mt-5 pt-5 General ">
+
+
+            <div class=" itemView m-t15  px-5">
+                <div class="row">
+                    <h4 class="pt-5 pb-3">Sequence Alignment</h4>
+
+
+                    <input type="text" id="seq1-inputPP" style="text-transform: uppercase" class="form-control mb-4" placeholder="exs :  ATGGGCC "> <br>
+                    <input type="text" id="seq2-inputPP" style="text-transform: uppercase" class="form-control mb-5" placeholder="exs :  ATGGGCC "> <br>
+
+
+                </div>
+                <div class="row">
+                    <div class="col"> <label>Gap Penalty:</label>
+                        <input type="text" id="gap-inputPP" class="form-control" placeholder="ex  :   -2"> <br>
+                    </div>
+
+                    <div class="mb-5 mt-4">
+
+                        <button id="globalProtein-btn" class="btn btn-defult p-3" style="background-color:#9171E7 ;">Protein Global Alignment</button>
+                        <button id="localProtein-btn" class="btn btn-defult p-3">Local protein Alignment</button>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+            <!-- ______________________________________________________________________________________________________________ -->
+            <div class=" itemView m-t15  px-5">
+                <div class="row">
+                    <h4 class="pt-5 pb-3">Sequence Alignment</h4>
+
+
+                    <input type="text" id="seq1-input" style="text-transform: uppercase" class="form-control mb-4" placeholder="exs :  ATGGGCC "> <br>
+                    <input type="text" id="seq2-input" style="text-transform: uppercase" class="form-control mb-5" placeholder="exs :  ATGGGCC "> <br>
+
+
+                </div>
+                <div class="row">
+                    <div class="col"><label>Match</label>
+                        <input type="text" id="match-input" class="form-control" placeholder="ex  :  1">
+                    </div>
+                    <div class="col"> <label>Mismatch</label>
+                        <input type="text" id="misMatch-input" class="form-control" placeholder="ex  :  -1">
+                    </div>
+                    <div class="col"> <label>Gap Penalty:</label>
+                        <input type="text" id="gap-input" class="form-control" placeholder="ex  :   -2"> <br>
+                    </div>
+
+                    <div class="mb-5 mt-4">
+
+                        <button id="global-btn" class="btn btn-defult p-3" style="background-color:#9171E7 ;">Global Alignment</button>
+                        <button id="local-btn" class="btn btn-defult p-3">Local Alignment</button>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+            <!-- ______________________________________________________________________________________________________________ -->
+
+
+        </div>
+
+        <div id='Result' class="container itemView mt-5 p-5">
+
+
+            <div class="row">
+
+
+                <h4 class="d-flex flex-row ">Sequence 1 :
+                    <h6> <span id="displaySeq1"></span></h6>
+                </h4>
+                <h4 class="d-flex flex-row ">Sequence 2 :
+                    <h6> <span id="displaySeq2"></span></h6>
+                </h4>
+
+
+                <pre class=" pt-5"> <h5> <b></span>Score Array :</b></h5><span id="scoreArray"></span></pre>
+                <pre><h5>Traceback Array :</h5><span id="tracebackArray"></span></pre>
+                <pre> <h5>All Scored Alignment:</h5><span id="scoredAlignment"></span></pre>
+
+
+
+
+            </div>
+
+        </div>
+        <!-- _____________________________________________________AutismProtein_____________________________________________________________ -->
+        <div class="  mt-5 pt-5 AutismProtein  ">
+
+            <div class=" itemView m-t15  px-5 ">
+
+                <h4 style="color:#862fe4;" class="pt-5  ">Autism Protein Sequence Alignment</h4>
+
+                <div class="pt-4  pd-5">
+                    <h5 class="mb-3"><b>Abnormal Sequence : </b> </h5>
+                    <span id="seqFstAutismP"> </span><br>
+                    <h5 class="mb-3 mt-5"><b>Normal Sequence :</b> </h5>
+                    <span id="seqSndAutismP"></span><br>
+
+
+
+                </div>
+
+
+
+                <div class="row mt-5 ml-4">
+
+                    <div class="col"> <label>Gap Penalty:</label>
+                        <input type="text" id="gap-inputP" class="form-control" placeholder="ex  :   -2"> <br>
+                    </div>
+
+
+                </div>
+
+
+
+
+                <button id="Autism-ProAlignment-btn" class="btn btn-defult p-3 mb-5">Autism Protein Global Alignment</button>
+
+            </div>
+
+
+        </div>
+
+
+        <div id='ResultProtein' class="container itemView mt-5 p-5">
+
+
+            <div class="row">
+
+
+                <h4 class="d-flex flex-row ">Sequence 1 :
+                    <h6> <span id="displaySeq1P"></span></h6>
+                </h4>
+                <h4 class="d-flex flex-row ">Sequence 2 :
+                    <h6> <span id="displaySeq2P"></span></h6>
+                </h4>
+
+
+                <pre class=" pt-5"> <h5> <b></span>Score Array :</b></h5><span id="scoreArrayP"></span></pre>
+                <pre><h5>Traceback Array :</h5><span id="tracebackArrayP"></span></pre>
+                <pre> <h5>All Scored Alignment:</h5><span id="scoredAlignmentP"></span></pre>
+
+
+
+
+            </div>
+
+        </div>
+
+        <!-- _____________________________________________________AutismDna____________________________________________________________ -->
+
+        <div class="container mt-5 pt-5 AutismDna">
+
+            <div class=" itemView m-t15  px-5 ">
+
+                <h4 style="color:#862fe4;" class="pt-5 mb-5 ">Autism DNA Sequence Alignment</h4>
+
+                <div class="mb-5">
+                    <h5 class="mb-3"><b>Abnormal Sequence : </b> </h5> <span id="seqFstAutismD"> </span><br>
+                    <h5 class="mb-3 mt-4"><b>Normal Sequence : </b> </h5> <span id="seqSndAutismD"></span><br>
+
+
+
+                </div>
+
+
+
+                <div class="row">
+                    <div class="col"><label>Match</label>
+                        <input type="text" id="match-inputD" class="form-control " placeholder="ex  :  1">
+                    </div>
+                    <div class="col"> <label>Mismatch</label>
+                        <input type="text" id="misMatch-inputD" class="form-control " placeholder="ex  :  -1">
+                    </div>
+                    <div class="col"> <label>Gap Penalty:</label>
+                        <input type="text" id="gap-inputD" class="form-control" placeholder="ex  :   -2"> <br>
+                    </div>
+
+
+                </div>
+                <button id="Autism-DNA-Alignment-btn" class="btn btn-defult p-3 mb-5 px-5">Global Autism Alignment</button>
+
+
+
+
+            </div>
+
+
+        </div>
+        <div id='ResultDna' class="container itemView mt-5 p-5">
+
+
+            <div class="row">
+
+
+                <h4 class="d-flex flex-row ">Sequence 1 :
+                    <h6> <span id="displaySeq1D"></span></h6>
+                </h4>
+                <h4 class="d-flex flex-row ">Sequence 2 :
+                    <h6> <span id="displaySeq2D"></span></h6>
+                </h4>
+
+
+                <pre class=" pt-5"> <h5> <b></span>Score Array :</b></h5><span id="scoreArrayD"></span></pre>
+                <pre><h5>Traceback Array :</h5><span id="tracebackArrayD"></span></pre>
+                <pre> <h5>All Scored Alignment:</h5><span id="scoredAlignmentD"></span></pre>
+
+
+
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+    <footer>
+        <div class="container">
+            <div class="row text-center  text-muted">
+                <p> © 2021 Bedimcode. All right reserved</p>
+            </div>
+
+        </div>
+        </div>
+    </footer>
+
+
+
+    <script type="text/python" id="script1" src="/train.py"> </script>
+
+    <!-- jquery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/brython/3.10.4/brython.min.js" integrity="sha512-Ku0Q6E6RaZsR8UNZKfm4GcC0ZXrDZyzj00pFmzR6YHoR9u1R4YuaM+Ew6hj50wtOr/lFRjTvQ7ZXJfGzbPAMDQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/brython/3.10.4/brython_stdlib.min.js" integrity="sha512-OewjWe3Wp5SiUyP8v5gPhDsRRkkGVdkoQuYIG/KQGorxe48orhfnpVaYPWv1ZStWVut4gSYiCeF6vVwbsvrNlw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
+    <!-- jquery -->
+    <script src="JS/jquery-3.6.0.min.js "></script>
+    <script src="JS/jquery-3.6.0.min.js "></script>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js " integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM " crossorigin="anonymous "></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js " integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p " crossorigin="anonymous "></script>
+    <script src="https://cdn.jsdelivr.net/npm/v@5.0.2/dist/js/bootstrap.min.js " integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF " crossorigin="anonymous "></script>
+
+</body>
+
+</html>
+</body>
+
+</html>

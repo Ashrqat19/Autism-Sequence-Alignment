@@ -1,0 +1,262 @@
+$header-height: 3rem;
+
+/*color*/
+
+$mainColor:#140038;
+$titleColor:#5D41A8;
+$titleColor2:#DFD3FF;
+//$textColor:#5B5757;
+$textColorLight:#ffffff;
+// /**/
+// $bodyColor:#FEFBFB;
+// $containerColor:#FFF;
+// $mainColorAlt:#C42130;
+// $mainColorSend:#C42130;
+
+/**/
+
+
+/*========== Font and typography ==========*/
+
+.bg-colorMain {
+    background-color: $titleColor;
+}
+
+
+/*fonts*/
+
+$body-font: 'Poppins',
+sans-serif;
+$biggestxxl-font-size: 2.5rem;
+$biggest-font-size: 1.5rem;
+$h2-font-size: 1.25rem;
+$h3-font-size: 1.125rem;
+$normal-font-size: .938rem;
+$small-font-size: .813rem;
+
+/*========== Font weight ==========*/
+
+$font-semi-bold: 400;
+$font-bold: 700;
+$font-regular: 300;
+.btn-defult {
+    background-color: $titleColor;
+    color: $textColorLight;
+}
+
+.headerTxt {
+    font-weight: $font-bold; //  line-height: 3.5rem;
+    font-size: $biggestxxl-font-size;
+    color: $mainColor;
+}
+
+.headerSMTxt {
+    font-weight: $font-semi-bold;
+    //  line-height: 3.5rem;
+    font-size: $biggest-font-size;
+    color: $mainColor;
+}
+
+.txtMainColor {
+    color: $mainColor;
+}
+
+.txtColor {
+    color: $titleColor;
+}
+
+.titleTxt {
+    font-size: $h2-font-size;
+    font-weight: $font-bold;
+}
+
+.contextTxt {
+    font-size: $normal-font-size;
+    font-weight: $font-regular;
+}
+
+.smallTxt {
+    font-size: $small-font-size;
+    font-weight: $font-regular;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,600;0,700;1,500&display=swap');
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+a,
+ul {
+    text-decoration: none;
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.section {
+    padding: 4rem 0 2rem;
+}
+
+
+/*padding*/
+
+.p {
+    &-15 {
+        padding: 15px;
+    }
+    &-b1 {
+        padding-bottom: .5rem;
+    }
+    &-b2 {
+        padding-bottom: 1.5rem;
+    }
+    &-b3 {
+        padding-bottom: 2rem;
+    }
+    &-b4 {
+        padding-bottom: 2.5rem;
+    }
+    &-b5 {
+        padding-bottom: 3rem;
+    }
+    &-b6 {
+        padding-bottom: 3.5rem;
+    }
+}
+
+
+/*margin*/
+
+.m {
+    &-b1 {
+        margin-bottom: .5rem;
+    }
+    &-b2 {
+        margin-bottom: 1.5rem;
+    }
+    &-b3 {
+        margin-bottom: 2rem;
+    }
+    &-b4 {
+        margin-bottom: 2.5rem;
+    }
+    &-b5 {
+        margin-bottom: 3rem;
+    }
+    &-b6 {
+        margin-bottom: 3.5rem;
+    }
+    &-t15 {
+        margin-top: 15rem;
+    }
+}
+
+$bgDefault: #3c56e7;
+$bgHighlight: #123fd6;
+$colDefault: #12111a;
+$colHighlight: #a908be;
+.navbar-default {
+    //  background-color: $bgDefault;
+    border-color: $bgHighlight;
+    .navbar-brand {
+        color: $colDefault;
+        &:hover,
+        &:focus {
+            color: $colHighlight;
+        }
+    }
+    .navbar-text {
+        color: $colDefault;
+    }
+    .navbar-nav {
+        >li {
+            >a {
+                color: $colDefault;
+                &:hover,
+                &:focus {
+                    color: $colHighlight;
+                }
+            }
+        }
+        >.active {
+            >a,
+            >a:hover,
+            >a:focus {
+                color: $colHighlight;
+                background-color: $bgHighlight;
+            }
+        }
+        >.open {
+            >a,
+            >a:hover,
+            >a:focus {
+                color: $colHighlight;
+                background-color: $bgHighlight;
+            }
+        }
+    }
+    .navbar-toggle {
+        border-color: $bgHighlight;
+        &:hover,
+        &:focus {
+            background-color: $bgHighlight;
+        }
+        .icon-bar {
+            background-color: $colDefault;
+        }
+    }
+    .navbar-collapse,
+    .navbar-form {
+        border-color: $colDefault;
+    }
+    .nav-link {
+        color: $colDefault;
+        &:hover {
+            color: $colHighlight;
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .navbar-default .navbar-nav .open .dropdown-menu {
+        >li>a {
+            color: $colDefault;
+            &:hover,
+            &:focus {
+                color: $colHighlight;
+            }
+        }
+        >.active {
+            >a,
+            >a:hover,
+            >a:focus {
+                color: $colHighlight;
+                background-color: $bgHighlight;
+            }
+        }
+    }
+}
+
+a,
+footer a {
+    color: $colDefault;
+    &:hover,
+    &:focus {
+        color: $colHighlight;
+    }
+}
+
+.activeClick {
+    color: $colHighlight;
+    &:hover,
+    &:focus {
+        color: $colDefault;
+    }
+}
